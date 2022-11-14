@@ -24,12 +24,12 @@ function keyboardController(){
    }
     if(down){
         console.log('d');
-        move_down();
+        move_right();
     }
 
     if(right){
     console.log('s')
-        move_right();
+        move_down();
     }
 
 

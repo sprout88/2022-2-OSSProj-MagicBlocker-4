@@ -18,7 +18,11 @@
     <script src="keyboard-controller.js"></script>
     <script src="player_control.js"></script>
     <script src="main.js"></script>
-    <script src="joystick.js"></script>
+    <script src="reference/joystick.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    
 
 
 
@@ -27,16 +31,8 @@
 <body>
     <button onclick="toggleMobile">모바일로바꾸기(조이스틱 보이기/숨기기)</button>
    
-    <div id="joyDiv" style="position:absolute;width:200px;height:200px"></div>
-    <script type="text/javascript">
-        var Joy1 = new JoyStick('joyDiv', {}, function(stickData) {
+    <div id="joyDiv"></div>
 
-        console.log(stickData.xPosition);
-        console.log(stickData.yPosition);
-        console.log(stickData.cardinalDirection);
-        console.log(stickData.x);
-        console.log(stickData.y);
-});
-    </script>
+    <script src="mobile_controller.js"></script>
 </body>
 </html>

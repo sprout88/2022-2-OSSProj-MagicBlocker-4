@@ -4,7 +4,7 @@ let enemies = [];
 let score = 0;
 
 //player
-let cord_x = 0;
+let cord_x = 300;
 let cord_y = 300;
 let playerSpeed =3;
 
@@ -36,7 +36,4 @@ function setup(){
         image(playerImg,cord_x,cord_y);
 
         keyboardController();
-
-        
-        
     }

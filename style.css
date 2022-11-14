@@ -1,0 +1,11 @@
+
+/*조이스틱*/
+/*(이슈) 조이스틱의 width와 height를 너무 작게 설정하면 렌더링 오류 발생 */
+#joyDiv{
+
+    position:absolute;
+    top:400px;
+    width:200px;
+    height:200px
+}
+

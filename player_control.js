@@ -2,7 +2,7 @@ function move_left(){
     cord_x-=playerSpeed;
 }
 function move_right(){
-    cord_y+=playerSpeed;
+    cord_x+=playerSpeed;
 }
 
 function move_up(){
@@ -10,7 +10,7 @@ function move_up(){
 }
 
 function move_down(){
-    cord_x+=playerSpeed;
+    cord_y+=playerSpeed;
 }
 
 
