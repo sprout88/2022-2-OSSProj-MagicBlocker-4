@@ -8,6 +8,8 @@ let cord_x = 0;
 let cord_y = 300;
 let playerSpeed =3;
 
+//p5.js 라이브러리의 렌더링 API인 preload(),setup(),draw() 를 이용하여 게임 그래픽 렌더링
+
 function preload(){    
     //playerImg = loadImage("sprite/tyler1-select.png");
     playerImg = loadImage("sprites/warrior-select.png");
