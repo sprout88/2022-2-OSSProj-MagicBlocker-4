@@ -3,6 +3,7 @@ let bullets = [];
 let enemies = [];
 let score = 0;
 
+
 //player
 let cord_x = 300;
 let cord_y = 300;
@@ -17,8 +18,15 @@ function preload(){
     enemyImg = loadImage("sprites/goblin.png");
 }
 
+let p;
+let js;
+let joySticking = false;
+let fireButton;
+
 function setup(){
     createCanvas(800,600);
+    scl = windowWidth/10;
+
     playerImg.resize(100,100);
     bulletImg.resize(23,13);
 
@@ -29,6 +37,12 @@ function setup(){
         };
         enemies.push(enemyImg);
     }
+
+    //조이스틱
+    p = new Player(width/2,height/2);
+    js = new JoyStick(1.5*scl,height-1.5*scl);
+    fireButton = new FireButton(width-scl*1.5,height-scl*1.5);
+    textAlign(CENTER,CENTER);
 }
 
     function draw(){
@@ -36,4 +50,35 @@ function setup(){
         image(playerImg,cord_x,cord_y);
 
         keyboardController();
+
+        //조이스틱
+        joySticking = false;
+        //fireButton.firing = false;
+
+        background(0);
+
+        touches.forEach( touch => {
+            if(dist(touch.x,touch.y,js.pos.x,js.pos.y) < scl * 1.2) {
+              let dir = js.track(touch);
+              dir.normalize();
+              dir.mult(p.speed);
+              p.pos.add(dir);
+              p.angle = lerp(p.angle,js.angle,0.6);
+              joySticking = true;
+            }
+            if(dist(touch.x,touch.y,fireButton.pos.x,fireButton.pos.y) < fireButton.r) {
+              fireButton.firing = true;
+            }
+          });
+          if(!joySticking) {
+            js.resetStick();
+          }
+          
+          
+          p.display();
+          
+          js.display();
+          fireButton.display();
+
+
     }
