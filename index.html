@@ -25,6 +25,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button onclick="toggleMobile">모바일로바꾸기(조이스틱 보이기/숨기기)</button>
+   
+    <div id="joyDiv" style="position:absolute;width:200px;height:200px"></div>
+    <script type="text/javascript">
+        var Joy1 = new JoyStick('joyDiv', {}, function(stickData) {
+
+        console.log(stickData.xPosition);
+        console.log(stickData.yPosition);
+        console.log(stickData.cardinalDirection);
+        console.log(stickData.x);
+        console.log(stickData.y);
+});
+    </script>
 </body>
 </html>
