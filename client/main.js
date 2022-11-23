@@ -203,6 +203,7 @@ Keyboard={
         }
 
         //셀 렌더링 https://raster.ly/tutorials/pixel-grid-in-p5js
+        /*
         const PADDING = 0;
         const ROWS = 20;
         const COLUMNS = 20;
@@ -220,6 +221,7 @@ Keyboard={
             rect(left,top,size,size);
           }
       }
+      */
       //
         
       
