@@ -2,12 +2,10 @@
 // 게임 서버 메인 앱
 //
 let express = require('express');
-const ThenPromise = require('promise');
  let app = express();
  let server = require('http').Server(app);
  let io = require('socket.io')(server, {});
  
- let promise = require('promise');
  
  app.get('/', function (req, res) {
      res.sendFile(__dirname + '/client/index.html');

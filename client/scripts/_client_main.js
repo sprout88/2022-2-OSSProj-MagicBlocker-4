@@ -1,6 +1,9 @@
 //
-//Main.js
+//client_main.js
 //
+/*
+클라이언트 코드의 객체를 생성하는 메인파일
+*/
 const SCRIPT_LOAD_DELAY=1000;
 const CLIENT_FRAME_RATE=5;
 setTimeout(() => {

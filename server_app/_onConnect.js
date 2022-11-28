@@ -1,6 +1,9 @@
 //
 //onConnect.js
 //
+/*
+레거시 코드. SocketOnHandler 클래스의 login_handler() 로 대체
+*/
 function onConnect(socket, name, points) {
  
     let player = new Char(socket.id, name, points);

@@ -1,18 +1,4 @@
 //
-// 서버에서 사용되는 상수
-//
- const SERVER_PORT = 8000;
- const REFRESH_RATE = 25;
- 
- const X_STARTING_POS = 30;
- const Y_STARTING_POS = 30;
- const PLAYER_SPEED = 10;
- const STARTING_DIR = 'down';
- const STARTING_CHAR = 'warrior';
- const MONGO_REPO = "Account";
- const BULLET_SPEED = 20;
- const COOL_TIME = 60;
-//
 //Bullet.js
 //투사체 클래스
  function Bullet(playerId,posX,posY,direction) {
@@ -109,6 +95,20 @@
         }
     }
 };
+//
+// 서버에서 사용되는 상수
+//
+ const SERVER_PORT = 8000;
+ const REFRESH_RATE = 25;
+ 
+ const X_STARTING_POS = 30;
+ const Y_STARTING_POS = 30;
+ const PLAYER_SPEED = 10;
+ const STARTING_DIR = 'down';
+ const STARTING_CHAR = 'warrior';
+ const MONGO_REPO = "Account";
+ const BULLET_SPEED = 20;
+ const COOL_TIME = 60;
 
 
 //
@@ -268,12 +268,10 @@ function toAllChat(line) { //채팅시스템
 // 게임 서버 메인 앱
 //
 let express = require('express');
-const ThenPromise = require('promise');
  let app = express();
  let server = require('http').Server(app);
  let io = require('socket.io')(server, {});
  
- let promise = require('promise');
  
  app.get('/', function (req, res) {
      res.sendFile(__dirname + '/client/index.html');
