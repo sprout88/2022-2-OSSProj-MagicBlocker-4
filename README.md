@@ -34,7 +34,7 @@ git clone을 받은 뒤, 게임서버를 실행하고, 웹브라우저로 localh
 
 ### Ubuntu에서 게임서버 실행 방법
 git clone [이 페이지의 주소]
-1. sudo apt install nodejs
+1. ```sudo apt install nodejs```
 2. sudo apt install npm
 3. sudo npm install nodemon
 4. cd 2022-2-OSSProj-MagicBlocker-4
@@ -42,9 +42,9 @@ git clone [이 페이지의 주소]
 6. Server Started! localhost: 8000 가 뜨면 성공
 
 서버가 작동하는 것을 확인하고 나면, forever 로 데몬으로 실행하도록 합니다.
-npm install forever -g
-forever start -w gameserver.js
-forever list #list에 /usr/bin/node gameserver.js 가 뜨면 성공
+1. npm install forever -g
+2. forever start -w gameserver.js
+3. forever list #list에 /usr/bin/node gameserver.js 가 뜨면 성공
 
 설치한 웹서버의 IP주소 또는 도메인:8000 으로 접속하면 게임을 플레이 할 수 있습니다.
 
