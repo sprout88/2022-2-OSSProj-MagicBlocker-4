@@ -38,11 +38,11 @@ git clone [이 페이지의 주소]
 2. ```sudo apt install npm```
 3. ```sudo npm install nodemon```
 4. ```cd 2022-2-OSSProj-MagicBlocker-4```
-5. ```sudo npm install gulp```
+5. ```sudo npm install```
 6. ```Server Started! localhost: 8000``` 가 뜨면 성공
 
 서버가 작동하는 것을 확인하고 나면, forever 로 데몬으로 실행하도록 합니다.
-1. ```npm install forever -g```
+1. ```sudo npm install forever -g```
 2. ```forever start -w gameserver.js```
 3. ```forever list #list에 /usr/bin/node gameserver.js``` 가 뜨면 성공
 
